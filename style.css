@@ -1,0 +1,27 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #1a1a1a; /* Dark background */
+    color: #ffffff; /* White text for any foreground elements, if needed */
+}
+
+#animation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure numbers don't cause scrollbars if they go to edges */
+}
+
+.number {
+    position: absolute;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for a digital look */
+    color: rgba(0, 255, 0, 0.3); /* Greenish, semi-transparent numbers */
+    font-size: 20px; /* Default size, can be randomized by JS */
+    user-select: none; /* Prevent text selection */
+    pointer-events: none; /* Prevent interaction */
+    opacity: 0; /* Start invisible, fade in with JS */
+    transition: opacity 1s ease-out, transform 5s linear; /* Smooth fade and movement */
+}
